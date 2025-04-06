@@ -2,6 +2,12 @@
 
 A modern, responsive web template for music EP/album releases featuring a liquid metal aesthetic, password-protected tracks, and video integration.
 
+## Demo
+
+https://github.com/MikeWayne92/ep-releaser/assets/150241275/c0c0c0c0-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+
+[🔗 Live Demo](https://mikewayne92.github.io/ep-releaser/)
+
 ## Features
 
 - 🎥 Animated background with customizable video
