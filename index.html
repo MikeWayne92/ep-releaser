@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Metal EP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #d4d4d4;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 40px 0;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.10;
+            z-index: -1;
+            pointer-events: none;
+        }
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(150, 150, 255, 0.7);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        .featured-video {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .featured-video iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(150, 150, 255, 0.5);
+        }
+        .track-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .track {
+            background: rgba(30, 30, 50, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .track:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(150, 150, 255, 0.5);
+        }
+        .track::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(150, 150, 255, 0.2), transparent);
+            animation: shimmer 5s infinite;
+            z-index: -1;
+        }
+        .track h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .video-link {
+            color: #9696ff;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .locked {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .locked::after {
+            content: 'Locked - Enter Password';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff6969;
+            font-weight: bold;
+        }
+        .password-box {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .password-box input {
+            padding: 10px;
+            background: rgba(30, 30, 50, 0.7);
+            border: 1px solid #9696ff;
+            color: #d4d4d4;
+            border-radius: 5px;
+        }
+        .password-box button {
+            padding: 10px 20px;
+            background: #9696ff;
+            border: none;
+            color: #0a0a0a;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video background -->
+        <video class="background-video" autoplay loop muted playsinline>
+            <source src="bg-vid.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h1>[Artist Name]</h1>
+        <div class="subtitle">Liquid Metal EP - Out Now</div>
+
+        <!-- Featured video section -->
+        <div class="featured-video">
+            <h2>Featured Video: Song Title One</h2>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+        </div>
+
+        <!-- Password input for unlocking tracks -->
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="unlockContent()">Submit</button>
+        </div>
+
+        <!-- Track list with songs and video links -->
+        <div class="track-list">
+            <div class="track">
+                <h3>1. Song Title One</h3>
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="video-link" target="_blank">Watch Music Video</a>
+            </div>
+            <div class="track locked" id="track2">
+                <h3>2. Song Title Two</h3>
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID2" class="video-link" target="_blank">Watch Music Video</a>
+            </div>
+            <div class="track locked" id="track3">
+                <h3>3. Song Title Three</h3>
+                <a href="#" class="video-link" target="_blank">Watch Music Video</a>
+            </div>
+            <div class="track locked" id="track4">
+                <h3>4. Song Title Four</h3>
+                <a href="#" class="video-link" target="_blank">Watch Music Video</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function unlockContent() {
+            const password = document.getElementById('password').value;
+            // Replace 'your_password_here' with the actual password you want to use
+            if (password === 'love') {
+                document.querySelectorAll('.locked').forEach(track => {
+                    track.classList.remove('locked');
+                });
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html> 
