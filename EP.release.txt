@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Ensures proper character encoding for special characters --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Makes the page responsive on all devices --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Liquid Metal EP&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #0a0a0a; /* Dark fallback color if video fails to load */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #d4d4d4; /* Light text color for contrast against dark background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif; /* Clean, modern font */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden; /* Prevents horizontal scrolling */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh; /* Ensures container fills viewport height */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center; /* Centers content vertically */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center; /* Centers content horizontally */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative; /* Allows absolute positioning of video background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 0; /* Adds vertical spacing for content */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.background-video {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute; /* Positions video behind all content */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%; /* Full width of container */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%; /* Full height of container */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover; /* Scales video to cover area, cropping if needed */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.45; /* ~45% transparency as requested */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: -1; /* Keeps video behind all other elements */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none; /* Prevents video from intercepting clicks */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 4em; /* Large, bold title */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase; /* Enhances metallic aesthetic */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 5px; /* Adds spacing for a futuristic look */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 0 10px rgba(150, 150, 255, 0.7); /* Glowing effect */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px; /* Spacing below title */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em; /* Smaller than title but still prominent */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.8; /* Slightly faded for hierarchy */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 40px; /* Spacing before next section */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.featured-video {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%; /* Responsive width */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px; /* Caps width for larger screens */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 60px; /* Spacing below video */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center; /* Centers title and iframe */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.featured-video iframe {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%; /* Full width of container */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 450px; /* Fixed height for consistent display */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none; /* Removes default border */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px; /* Rounded corners for style */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 20px rgba(150, 150, 255, 0.5); /* Metallic glow */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.track-list {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid; /* Grid layout for responsive tracks */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive columns */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px; /* Spacing between tracks */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%; /* Responsive width */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px; /* Caps width for larger screens */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.track {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(30, 30, 50, 0.7); /* Semi-transparent metallic background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px; /* Inner spacing */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px; /* Rounded corners */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease; /* Smooth hover animation */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative; /* For pseudo-element positioning */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden; /* Contains shimmer effect */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.track:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px); /* Slight lift on hover */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 20px rgba(150, 150, 255, 0.5); /* Glow effect */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.track::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: ''; /* Empty pseudo-element for shimmer */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: -50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: -50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 200%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 200%; /* Oversized for rotation effect */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: radial-gradient(circle, rgba(150, 150, 255, 0.2), transparent); /* Subtle glow */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: shimmer 5s infinite; /* Continuous rotation */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: -1; /* Behind track content */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.track h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 0 10px; /* Spacing below track title */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em; /* Readable size */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.video-link {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9696ff; /* Metallic blue-purple color */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none; /* Removes underline */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em; /* Slightly smaller text */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.locked {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.5; /* Fades locked tracks */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none; /* Disables interaction */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.locked::after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: 'Locked - Enter Password'; /* Overlay text */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translate(-50%, -50%); /* Centers text */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff6969; /* Red for visibility */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold; /* Emphasizes lock status */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.password-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0; /* Vertical spacing */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center; /* Centers input and button */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.password-box input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px; /* Comfortable input size */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(30, 30, 50, 0.7); /* Matches track background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #9696ff; /* Metallic border */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #d4d4d4; /* Light text */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px; /* Rounded corners */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.password-box button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px; /* Button size */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #9696ff; /* Metallic blue-purple */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none; /* Clean look */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0a0a0a; /* Dark text for contrast */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px; /* Rounded corners */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer; /* Indicates clickability */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes shimmer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: rotate(0deg); } /* Start position */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: rotate(360deg); } /* Full rotation */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Video background for chrome liquid waterfall effect --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;video class="background-video" autoplay loop muted playsinline&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Autoplay starts video, loop repeats it, muted allows autoplay, playsinline for mobile --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;source src="bg-vid.mov" type="video/mp4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Local background video file --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Your browser does not support the video tag.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Fallback text for unsupported browsers --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/video&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;[Artist Name]&lt;/h1&gt; &lt;!-- Artist name placeholder --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subtitle"&gt;Liquid Metal EP - Out Now&lt;/div&gt; &lt;!-- Release info --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Featured video section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="featured-video"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Featured Video: Song Title One&lt;/h2&gt; &lt;!-- Main video title --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Embedded YouTube video; replace VIDEO_ID with actual ID --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Password input for unlocking tracks --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="password-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="password" id="password" placeholder="Enter Password"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Password field with placeholder --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="unlockContent()"&gt;Submit&lt;/button&gt; &lt;!-- Triggers unlock function --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Track list with songs and video links --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="track-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;1. Song Title One&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://www.youtube.com/watch?v=VIDEO_ID" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- First track, always unlocked --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track locked" id="track2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;2. Song Title Two&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://www.youtube.com/watch?v=VIDEO_ID2" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Locked track; requires password --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track locked" id="track3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;3. Song Title Three&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track locked" id="track4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;4. Song Title Four&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track locked" id="track5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;5. Song Title Five&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track locked" id="track6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;6. Song Title Six&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="video-link" target="_blank"&gt;Watch Music Video&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function unlockContent() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const password = document.getElementById('password').value; /* Gets entered password */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (password.toLowerCase() === 'love') { /* Checks if password is "love" (case-insensitive) */</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const lockedTracks = document.querySelectorAll('.locked'); /* Selects all locked tracks */</p>
+<p class="p1"><span class="Apple-converted-space">                </span>lockedTracks.forEach(track =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>track.classList.remove('locked'); /* Removes locked class to unlock */</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Content unlocked!'); /* Success message */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Incorrect password. Try again.'); /* Error message */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
