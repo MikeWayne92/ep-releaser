@@ -4,7 +4,7 @@ A modern, responsive web template for music EP/album releases featuring a liquid
 
 ## Demo
 
-https://github.com/MikeWayne92/ep-releaser/assets/150241275/c0c0c0c0-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+[https://github.com/MikeWayne92/ep-releaser/assets/150241275/c0c0c0c0-c0c0-c0c0-c0c0-c0c0c0c0c0c0](https://mikewayne92.github.io/ep-releaser/)
 
 [🔗 Live Demo](https://mikewayne92.github.io/ep-releaser/)
 
